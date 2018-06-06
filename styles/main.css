@@ -1,0 +1,339 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.localendar_container {}
+.localendar_container  table td {border:0px; padding:0px; margin:0px;}
+.localendar_container a img {border:0px;padding:0px;margin:0px;background:none; }
+.localendar_container a:hover img {border:0px;padding:0px; margin:0px;background:none; }
+.localendar_container small {background:none;padding:0px; }
+
+@media only screen and (max-width: 768px) {
+  #mm_nav_bar {
+	display:none;
+  }
+}
+
+@font-face {
+    font-family: "proxima-nova";
+    src: url("/css/proxima-nova-regular.woff") format('woff');
+}
+@font-face {
+    font-family: "proxima-nova-bold";
+    src: url("/css/proxima-nova-bold.woff") format('woff');
+}
+
+
+A.poweredby {font-family : Arial, Helvetica, sans-serif; text-decoration : none; color : Blue;}
+div.m-titlepad {padding:4px;}
+A.lc-tdn {text-decoration : none;}
+A.today {font-family : Arial, Helvetica, sans-serif; text-decoration : none; color : Yellow;}
+A.weekday {font-family : Arial, Helvetica, sans-serif; text-decoration : none; color : White;}
+A.white {text-decoration : none; color : White;}
+A.black {font-family : Arial, Helvetica, sans-serif; text-decoration : none; color : Black;}
+A.lc_black {text-decoration : none; color : Black;}
+A.gray {font-family : Arial, Helvetica, sans-serif; text-decoration : none; color : #555;}
+A.navigator {font-family : Arial, Helvetica, sans-serif; color : Black;}
+A.mj {text-decoration : none; font-size:14px;padding:0 0 0 0;margin-left:10px;text-transform:uppercase;color:#666666}
+.dj {font-size:14px;}
+A.mj_search {font-family : Arial, Helvetica, sans-serif;text-decoration : none; color : White;}
+A.mj_black {font-family : Arial, Helvetica, sans-serif;text-decoration : none; color : #000000;}
+A.wj {font-family : Arial, Helvetica, sans-serif; text-decoration : none; color : #404040;}
+A.wj_search {font-family : Arial, Helvetica, sans-serif; text-decoration : none; color : White;}
+
+A.dj {font-family : Arial, Helvetica, sans-serif; color : #ffffff;}
+A.dj_today 	{padding-left:3px;font-family : Arial, Helvetica, sans-serif; color : #4e5865;}
+A.dj_weekday 	{padding-left:3px;font-family : Arial, Helvetica, sans-serif; color : #a6aeb0;}
+A.dj_weekend 	{padding-left:3px;font-family : Arial, Helvetica, sans-serif; color : #a6aeb0;}
+A.dj_diffmonth 	{padding-left:3px;font-family : Arial, Helvetica, sans-serif; color : #a6aeb0;}
+
+
+.eventQuickAdd {height:16px;width:16px;float:right;padding-top:1px;padding-right:1px}
+.eventQuickAdd .addButton{display: none;float:right;}
+.eventQuickAdd:hover .addButton{display: inline;}
+
+
+
+
+
+
+
+
+
+.localendar_container table { border-collapse:separate;}
+
+.localendar_container TD.header {font-family : Arial, Helvetica, sans-serif; color : White; font-size: 12px}
+.localendar_container TD.listing {font-family : Arial, Helvetica, sans-serif; color : Black; font-size: 12px}
+.localendar_container TD.body {font-family : Arial, Helvetica, sans-serif; font-size: 12px}
+.mm-td {text-align:center;font-family : Arial, Helvetica, sans-serif;}
+.al-td {text-align:left;}
+.ar-td {text-align:right;}
+.localendar_container #main_cal td {text-align:left;}
+.localendar_container .d2_desc {margin-left:8px;font-size:13px;}
+TD.white {font-family : Arial, Helvetica, sans-serif; text-decoration : none; color : White;}
+.localendar_container div.standard {font-family : Arial, Helvetica, sans-serif; }
+div.standardsmall {font-family : Arial, Helvetica, sans-serif; font-size : small;}
+div.iela{text-decoration:underline; }
+td.today { background-color:#fcf8d1;}
+p {margin:0; padding:0;}
+
+
+#calendar table tr td {border-color:transparent;}
+
+
+div#weather{font-family : Arial, Helvetica, sans-serif; font-size: 10px; color: #000000}
+div#holiday{color: #660000}
+.holiday{color: #660000}
+
+<!-- empty table cells -->
+
+td#cell1{border-bottom: 2px #bbb solid; border-left: 2px #bbb solid}
+td#cell2{border-bottom: 2px #bbb solid; border-left: 2px #bbb solid; border-right: 2px #bbb solid}
+td#cell3{border-left: 2px #bbb solid;}
+td#cell4{border-left: 2px #bbb solid; border-right: 2px #bbb solid}
+td#cell5{border-left: 2px #bbb solid; border-bottom: 2px #bbb solid}
+td#cell6{border-left: 2px #bbb solid; border-right: 2px #bbb solid; border-bottom: 2px #bbb solid}
+
+<!-- An event that occurs only on a single day -->
+td#event{font-family : Arial, Helvetica, sans-serif; font-size: 10px; border-style: solid; border-width: 2}
+td#event_b{font-family : Arial, Helvetica, sans-serif; font-size: 10px; border-top: 2px #FFFFFF solid; border-left: 2px #bbb solid}
+td#event_b0{font-family : Arial, Helvetica, sans-serif; font-size: 10px; border-top: none; border-left: 2px #bbb solid; border-right: 2px #bbb solid}
+td#event_b1{font-family : Arial, Helvetica, sans-serif; font-size: 10px; border-top: none; border-left: 2px #bbb solid; border-right: none}
+td#event_b2{font-family : Arial, Helvetica, sans-serif; font-size: 10px; border-top: 2px #FFFFFF solid; border-left: 2px #bbb solid; border-right: 2px #bbb solid}
+
+<!-- An event that occurs across multiple days -->
+td#mevent{font-family : Arial, Helvetica, sans-serif; font-size: 10px; border-style: solid; border-width: 2}
+td#mevent_b{font-family : Arial, Helvetica, sans-serif; font-size: 10px; border-top: 2px #FFFFFF solid; border-left: 2px #bbb solid}
+td#mevent_b0{font-family : Arial, Helvetica, sans-serif; font-size: 10px; border-top: none; border-left: 2px #bbb solid; border-right: 2px #bbb solid}
+td#mevent_b1{font-family : Arial, Helvetica, sans-serif; font-size: 10px; border-top: none; border-left: 2px #bbb solid; border-right: none}
+td#mevent_b2{ font-family : Arial, Helvetica, sans-serif; font-size: 10px; border-top: 2px #FFFFFF solid; border-left: 2px #bbb solid; border-right: 2px #bbb solid}
+
+<!-- Weekend cell -->
+td#weekend{font-family : Arial, Helvetica, sans-serif; font-size: 16px; color: #000000;}
+<!-- Weekday cell -->
+td#weekday{font-family : Arial, Helvetica, sans-serif; font-size: 14px; color: #000000;}
+td#wj{font-family : Arial, Helvetica, sans-serif; text-decoration : none; color : #404040; cursor:hand}
+
+IMG.event_image {border:0px;}
+
+.rounded,.lv-rounded {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;}
+.pref-rounded {-moz-border-radius-topright: 10px;-moz-border-radius-bottomright: 10px; -moz-border-radius-bottomleft: 10px;-webkit-border-top-right-radius: 10px;-webkit-border-bottom-right-radius: 10px;-webkit-border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px}
+.w0label-rounded {-moz-border-radius-topleft: 5px;-moz-border-radius-bottomleft: 5px;-webkit-border-top-left-radius: 5px;-webkit-border-bottom-left-radius: 5px; border-top-left-radius: 5px; border-bottom-left-radius: 5px}
+.d0header-rounded {-moz-border-radius-topleft: 5px;-moz-border-radius-topright: 5px;-webkit-border-top-left-radius: 5px;-webkit-border-top-right-radius: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px}
+.ee-roundedleft {padding-left:8px;-moz-border-radius-topleft: 5px;-moz-border-radius-bottomleft: 5px;-webkit-border-top-left-radius: 5px;-webkit-border-bottom-left-radius: 5px; border-top-left-radius: 5px; border-bottom-left-radius: 5px}
+.ee-roundedright {-moz-border-radius-topright: 5px;-moz-border-radius-bottomright: 5px;-webkit-border-top-right-radius: 5px;-webkit-border-bottom-right-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px}
+.rp-label {background:#B8D0DC;-moz-border-radius-topleft: 5px;-moz-border-radius-bottomleft: 5px;-webkit-border-top-left-radius: 5px;-webkit-border-bottom-left-radius: 5px; border-top-left-radius: 5px; border-bottom-left-radius: 5px}
+.lv-rounded {padding:10px;}
+
+
+.user-info {position:absolute;top:-100;left:-100;}
+
+.category-usr,.merged-usr,.m-usr,.mt-usr,.yt-usr,.mm-usr,.w-usr,.wt-usr,.d-usr,.dr-usr,.dj-usr,.d-timeofday-usr,.d-dayofweek-usr,.dj_weekday-usr,.mj-usr,.d2-header-usr,.dj_weekend-usr,.dj_weekday-usr,.dj_diffmonth-usr, .w-date-usr, .list-daylabel-usr, .list-event-desc-usr, .d2-date-usr, .list-event-title-usr, .dayname-abbr-usr {}
+.lc_holiday_usr {color:#800000;}
+.m-usr{font-size:12px;}
+.list-usr{font-size:12px;}
+.mt-usr{font-size:20px;}
+.yt-usr{font-size:20px;}
+.mm-usr{font-size:24px;}
+.mal-usr{}
+.mar-usr{}
+.dal-usr{}
+.dar-usr{}
+.wal-usr{}
+.war-usr{}
+.w-usr{font-size:13px;color:#333}
+.wt-usr{font-size:20px;}
+.d-usr{color:#333}
+.dt-usr{font-size:20px;}
+
+.dj_weekend-theme, .dj_weekday-theme, .dj_diffmonth-theme {
+	text-decoration:none;
+}
+.mini-menu-theme {
+        font-size:16px;
+        font-family: 'Mitr', Arial;
+        -webkit-font-smoothing: antialiased;
+}
+.w-date-theme,.d2-date-theme, .mini-menu-theme,.dj-theme, .dayname-abbr-theme,.d-dayofweek,.list-daylabel-theme,.d2-header-theme {
+        text-shadow: rgba(0, 0, 0, 0.3) 0px 2px 3px;
+}
+.mm-theme, .mt-theme, .m-event-title-theme,.list-event-title-theme, .mj-theme, .dj_weekend-theme, .dj_weekday-theme, .dj_diffmonth-theme, .weather-theme, .dayname-abbr-theme, .category-theme, .merged-theme,
+.list-daylabel-theme, .w-date-theme, .dj-theme, .w-theme, .d-timeofday, .d-dayofweek,.d2-header-theme, .list-event-desc-theme,.d2-date-theme, .dt-theme, .wt-theme{
+        -webkit-font-smoothing: antialiased;
+}
+.d-timeofday {
+        padding:4px; font-size:13px;
+}
+.d-dayofweek{
+        padding:4px; margin-left:70px; font-size:16px;
+}
+.list-event-title-theme,.d2-date-theme, .category-theme, .merged-theme {
+        font-size:13px;
+}
+.mm-theme, .mt-theme, .m-event-title-theme, .list-event-title-theme, .mj-theme, .dayname-abbr-theme, .category-theme , .merged-theme,
+.list-daylabel-theme, .w-date-theme, .dj-theme, .w-theme, .d-timeofday, .d-dayofweek,.d2-header-theme,.d2-date-theme, .dt-theme, .wt-theme {
+        font-family: 'Montserrat', Arial;
+}
+.list-event-desc-theme {
+        font-family: 'Open Sans', Sans;
+        font-size:13px;
+}
+.weather-theme, .holiday-theme{
+        font-family: 'Merriweather', Arial;
+        font-size:12px;
+}
+
+
+/**
+ * PINBOARD CSS
+ */
+.pinitem {
+style:width:200px;
+min-height:58px;
+margin:8px;
+font-family: 'Roboto', Arial;
+}
+
+.pinitem_date {
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border-radius: 4px;
+float:right;
+width:40px;
+height:56px;
+color:#fff;
+background:#ccc;
+font-size:18px;
+font-weight:bold;
+margin-left:4px;
+text-align:center;
+}
+
+.pinitem_dc1 {
+padding-top:8px;
+font-size:10px;
+font-family: 'Montserrat', Arial;
+text-shadow: rgba(0, 0, 0, 0.3) 0px 2px 3px;
+-webkit-font-smoothing: antialiased;
+}
+
+.pinitem_dc2 {
+padding: 0 8 8 8;
+font-size:22px;
+font-family: 'Montserrat', Arial;
+text-shadow: rgba(0, 0, 0, 0.3) 0px 2px 3px;
+-webkit-font-smoothing: antialiased;
+}
+
+.pinitem_desc {
+font-family: 'Open Sans', Sans;
+-webkit-font-smoothing: antialiased;
+font-size:13px;
+}
+
+.pinitem_title {
+font-family:"Archivo Narrow",Arial;
+font-size:22px;
+color:#5b8fc6;
+-webkit-font-smoothing: antialiased;
+text-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px;
+}
+
+.pinitem_time {
+font-family: 'Montserrat', Arial;
+-webkit-font-smoothing: antialiased;
+font-size:12px;
+color:#777;
+}
+
+.pinitem_title:hover {
+text-decoration:underline;
+}
+
+.pinitem_title .holiday{
+color:#555;
+}
+
+.pinitem_title_sm {
+font-size:12px;
+color:#555;
+}
+
+.footer {
+font-family:Arial;
+}
+
+#tiles {
+list-style-type: none;
+position: relative; /** Needed to ensure items are laid out relative to this container **/
+margin: 0;
+}
+
+/**
+ * Grid items
+ */
+#tiles li {
+width: 210px;
+background-color: #f9f9f9;
+border: 1px solid #d7d7d7;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border-radius: 4px;
+display: none; /** Hide items initially to avoid a flicker effect **/
+overflow:hidden;
+
+-moz-box-shadow: 0px 0px 8px #d6d6d6;
+-webkit-box-shadow: 0px 0px 8px #d6d6d6;
+box-shadow: 0px 0px 8px #d6d6d6;
+filter: progid:DXImageTransform.Microsoft.Shadow(Color=#d6d6d6, Strength=2, Direction=0), 
+     progid:DXImageTransform.Microsoft.Shadow(Color=#d6d6d6, Strength=2, Direction=90), 
+     progid:DXImageTransform.Microsoft.Shadow(Color=#d6d6d6, Strength=2, Direction=180), 
+     progid:DXImageTransform.Microsoft.Shadow(Color=#d6d6d6, Strength=2, Direction=270)
+}
+
+#tiles li img {
+display: block;
+}
+
+/**
+ * Grid item text
+ */
+#tiles li p {
+color: #666;
+font-size: 12px;
+margin-top: 12px;
+}
+
+/* Resets */
+.pinboard_container ul li {
+padding:0px;
+background: #f9f9f9;
+}
+
+.pinboard_container img{
+padding:0px;
+border: 0px;
+margin: 0px;
+}
+
+.pinboard_container p{
+line-height:normal;
+}
+
+
+
+h3 {
+	font-family: 'Montserrat', Arial;
+	text-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px;
+        -webkit-font-smoothing: antialiased;
+}
+.desc-text0, .desc-text1, .desc-text2 {
+	font-size:14px;
+	font-family: 'Open Sans', Arial;
+        -webkit-font-smoothing: antialiased;
+}
+.desc-text1 {
+	font-weight:bold;
+}
+.desc-text2 {
+	font-size:13px;
+}
