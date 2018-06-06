@@ -273,7 +273,7 @@ margin: 0;
  */
 #tiles li {
 width: 210px;
-background-color: #f9f9f9;
+/*background-color: #f9f9f9;*/
 border: 1px solid #d7d7d7;
 -moz-border-radius: 4px;
 -webkit-border-radius: 4px;
